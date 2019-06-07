@@ -50,7 +50,7 @@ function MiniPalette(props) {
         <div className={classes.miniColor} key={color.name} style={{ backgroundColor: color.color }}></div>
     ))
     return (
-        <div className={classes.root}>
+        <div className={classes.root} onClick={props.handleClick}>
             <div className={classes.colors}>
                 {miniColorBoxes}
             </div>
