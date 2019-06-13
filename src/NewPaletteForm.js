@@ -87,6 +87,19 @@ class NewPaletteForm extends Component {
         };
     };
 
+    componentDidMount() {
+        ValidatorForm.addValidationRule('isColorNameUnique', (value) =>
+            this.state.colors.every(
+                ({ name }) => name.toLowerCase() !== value.toLowerCase()
+            )
+        );
+        ValidatorForm.addValidationRule('isColorUnique', (value) =>
+            this.state.colors.every(
+                ({ color }) => color !== this.state.currentColor
+            )
+        )
+    };
+
     handleDrawerOpen = () => {
         this.setState({ open: true });
     };
@@ -166,6 +179,8 @@ class NewPaletteForm extends Component {
                         <TextValidator
                             value={newName}
                             onChange={this.handleChange}
+                            validators={["required", "isColorNameUnique", "isColorUnique"]}
+                            errorMessages={["This field is required", "Color name must be unique", "Color is already used"]}
                         />
                         <Button
                             variant="contained"
