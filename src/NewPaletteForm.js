@@ -140,6 +140,12 @@ class NewPaletteForm extends Component {
         this.props.history.push("/")
     };
 
+    removeColor = (colorName) => {
+        this.setState({
+            colors: this.state.colors.filter(color => color.name !== colorName)
+        })
+    };
+
     render() {
         const { classes } = this.props;
         const { open, currentColor, newColorName } = this.state;
@@ -211,7 +217,7 @@ class NewPaletteForm extends Component {
                     </Button>
                     </div>
                     <ChromePicker color={currentColor} onChangeComplete={this.updateCurrentColor} />
-                    <ValidatorForm onSubmit={this.addNewColor}>
+                    <ValidatorForm onSubmit={this.addNewColor} instantValidate={false}>
                         <TextValidator
                             value={newColorName}
                             name="newColorName"
@@ -236,7 +242,12 @@ class NewPaletteForm extends Component {
                 >
                     <div className={classes.drawerHeader} />
                     {this.state.colors.map(color => (
-                        <DraggableColorBox color={color.color} name={color.name} />
+                        <DraggableColorBox
+                            key={color.naem}
+                            color={color.color}
+                            name={color.name}
+                            handleClick={() => this.removeColor(color.name)}
+                        />
                     ))}
                 </main>
             </div>
