@@ -243,7 +243,7 @@ class NewPaletteForm extends Component {
                     <div className={classes.drawerHeader} />
                     {this.state.colors.map(color => (
                         <DraggableColorBox
-                            key={color.naem}
+                            key={color.name}
                             color={color.color}
                             name={color.name}
                             handleClick={() => this.removeColor(color.name)}

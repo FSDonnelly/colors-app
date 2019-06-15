@@ -26,6 +26,7 @@ export default {
     },
     palettes: {
         boxSizing: "border-box",
+        height: "100vh",
         width: "100%",
         display: "grid",
         gridTemplateColumns: "repeat(3, 30%)",
