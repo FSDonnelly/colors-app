@@ -29,7 +29,8 @@ export default {
     },
     emoji: {
         marginLeft: "0.5rem",
-        fontSize: "1.5rem"
+        fontSize: "1.5rem",
+        display: "contents",
     },
     miniColor: {
         height: "25%",
