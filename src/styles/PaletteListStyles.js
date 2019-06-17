@@ -4,7 +4,8 @@ export default {
         height: "100%",
         display: "flex",
         alignItems: "flex-start",
-        justifyContent: "center"
+        justifyContent: "center",
+        overflow: "auto"
     },
     container: {
         width: "50%",

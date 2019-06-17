@@ -5,7 +5,7 @@ export default {
         borderRadius: "5px",
         padding: "0.5rem",
         position: "relative",
-        overflow: "hidden",
+        // overflow: "hidden",
         "&:hover": {
             cursor: "pointer"
         }

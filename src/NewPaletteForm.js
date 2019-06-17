@@ -130,6 +130,10 @@ class NewPaletteForm extends Component {
         })
     };
 
+    clearColors = () => {
+        this.setState({ colors: [] })
+    };
+
     handleSubmit = () => {
         let newName = this.state.newPaletteName;
         const newPalette = {
@@ -216,7 +220,7 @@ class NewPaletteForm extends Component {
                         Design Your Palette
                     </Typography>
                     <div>
-                        <Button variant="contained" color="secondary">
+                        <Button variant="contained" color="secondary" onClick={this.clearColors}>
                             Clear Palette
                     </Button>
                         <Button variant="contained" color="primary">
