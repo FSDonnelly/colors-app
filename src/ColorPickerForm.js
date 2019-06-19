@@ -20,6 +20,20 @@ class ColorPickerForm extends Component {
         };
     };
 
+    componentDidMount() {
+        ValidatorForm.addValidationRule('isColorNameUnique', (value) =>
+            this.props.colors.every(
+                ({ name }) => name.toLowerCase() !== value.toLowerCase()
+            )
+        );
+        ValidatorForm.addValidationRule('isColorUnique', (value) =>
+            this.props.colors.every(
+                ({ color }) => color !== this.state.currentColor
+            )
+        );
+
+    };
+
     updateCurrentColor = (newColor) => {
         this.setState({ currentColor: newColor.hex })
     };
