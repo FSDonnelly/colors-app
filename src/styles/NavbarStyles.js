@@ -5,6 +5,11 @@ export default {
         alignItems: "center",
         justifyContent: "flex-start",
         height: "6vh",
+        "& span": {
+            [sizes.down("md")]: {
+                display: "none"
+            }
+        }
     },
     logo: {
         marginRight: "15px",
@@ -18,9 +23,6 @@ export default {
         "& a": {
             textDecoration: "none",
             color: "black",
-        },
-        [sizes.down("xs")]: {
-            display: "none"
         }
     },
     slider: {
@@ -43,8 +45,8 @@ export default {
             marginLeft: "-7px",
             marginTop: "-3px",
         },
-        [sizes.down("md")]: {
-            width: "150px"
+        [sizes.down("xs")]: {
+            display: "none"
         }
     },
     selectContainer: {
