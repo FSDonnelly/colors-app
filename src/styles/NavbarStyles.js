@@ -50,5 +50,8 @@ export default {
     selectContainer: {
         marginLeft: "auto",
         marginRight: "1rem",
+    },
+    [sizes.down("md")]: {
+        width: "150px"
     }
 }

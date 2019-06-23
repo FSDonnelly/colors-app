@@ -53,7 +53,7 @@ class Navbar extends Component {
                     </Select>
                 </div>
                 <Snackbar
-                    anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                    anchorOrigin={{ vertical: "top", horizontal: "left" }}
                     open={this.state.open}
                     autoHideDuration={3000}
                     message={<span id="message-id">Format Changed To {format.toUpperCase()}!</span>}
