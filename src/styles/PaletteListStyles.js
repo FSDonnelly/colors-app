@@ -11,6 +11,9 @@ export default {
         backgroundColor: "#eb3d30",
         backgroundImage: `url(${bg})`
     },
+    heading: {
+        fontSize: "2rem"
+    },
     container: {
         width: "50%",
         display: "flex",
