@@ -1,6 +1,15 @@
 import sizes from './sizes';
 import bg from './bg.svg';
 export default {
+    "@global": {
+        ".fade-exit": {
+            opacity: 1
+        },
+        ".fade-exit-active": {
+            opacity: 0,
+            transition: "opacity 500ms ease-out"
+        }
+    },
     root: {
         height: "100vh",
         display: "flex",
@@ -31,7 +40,7 @@ export default {
         display: "flex",
         width: "100%",
         justifyContent: "space-between",
-        color: "white", 
+        color: "white",
         alignItems: "center",
         "& a": {
             color: "white",
@@ -52,6 +61,6 @@ export default {
             gridTemplateColumns: "repeat(1, 100%)",
             gridGap: "1.4rem",
         },
-       
+
     }
 }
