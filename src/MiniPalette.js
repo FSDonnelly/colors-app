@@ -4,10 +4,14 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import styles from './styles/MiniPaletteStyles';
 
 class MiniPalette extends Component {
+    constructor(props) {
+        super(props);
+        this.deletePalette = this.deletePalette.bind(this);
+    };
 
-    deletePalette = (e) => {
+    deletePalette(e) {
         e.stopPropagation();
-        this.props.handleDelete(this.props.id);
+        this.props.openDialog(this.props.id);
     };
 
     render() {
