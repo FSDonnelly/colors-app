@@ -46,7 +46,6 @@ class PaletteMetaForm extends Component {
     };
 
     savePalette = (emoji) => {
-        console.log(emoji.native);
         const newPalette = {
             paletteName: this.state.newPaletteName,
             emoji: emoji.native
