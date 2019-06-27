@@ -9,12 +9,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { Button } from '@material-ui/core';
 import arrayMove from 'array-move';
 
-import styles from './styles/NewPaletteFormStyles';
 import DraggableColorList from './DraggableColorList';
 import PaletteFormNav from './PaletteFormNav';
 import ColorPickerForm from './ColorPickerForm';
-
-
+import styles from './styles/NewPaletteFormStyles';
 
 class NewPaletteForm extends Component {
     static defaultProps = {

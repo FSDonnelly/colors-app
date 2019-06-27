@@ -10,11 +10,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import CheckIcon from '@material-ui/icons/Check';
 import CloseIcon from '@material-ui/icons/Close';
-import MiniPalette from './MiniPalette';
 import { withStyles } from '@material-ui/styles';
-import styles from './styles/PaletteListStyles';
 import blue from '@material-ui/core/colors/blue';
 import red from '@material-ui/core/colors/red';
+
+import MiniPalette from './MiniPalette';
+
+import styles from './styles/PaletteListStyles';
 
 class PaletteList extends Component {
     constructor(props) {
