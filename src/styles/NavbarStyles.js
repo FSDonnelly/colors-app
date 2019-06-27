@@ -6,8 +6,11 @@ export default {
         justifyContent: "flex-start",
         height: "6vh",
         "& span": {
-            [sizes.down("md")]: {
-                display: "none"
+            [sizes.down("sm")]: {
+                width: "150px"
+            },
+            [sizes.down("xs")]: {
+                width: "75px"
             }
         }
     },
@@ -45,8 +48,11 @@ export default {
             marginLeft: "-7px",
             marginTop: "-3px",
         },
+        [sizes.down("sm")]: {
+            width: "150px"
+        },
         [sizes.down("xs")]: {
-            display: "none"
+            width: "75px"
         }
     },
     selectContainer: {
