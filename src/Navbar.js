@@ -18,14 +18,14 @@ class Navbar extends Component {
         this.state = { format: "hex", open: false };
         this.handleChange = this.handleChange.bind(this);
         this.closeSnackbar = this.closeSnackbar.bind(this);
-    }
+    };
     handleChange(e) {
         this.setState({ format: e.target.value, open: true });
         this.props.handleChange(e.target.value);
-    }
+    };
     closeSnackbar() {
         this.setState({ open: false });
-    }
+    };
     render() {
         const { level, changeLevel, showingAllColors, classes } = this.props;
         const { format } = this.state;
@@ -76,5 +76,5 @@ class Navbar extends Component {
             </header>
         )
     }
-}
+};
 export default withStyles(styles)(Navbar);
